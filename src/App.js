@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import useAuth from "./services/firebase/useAuth";
 import useCheckin from "./services/firebase/useCheckin";
 import theme from "./config/theme.js";
+
+//Styles
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./config/globalStyles";
 import Header from "./Components/Header";
@@ -12,8 +14,12 @@ import {
   useHistory,
   Redirect,
 } from "react-router-dom";
+
+//Firebase
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "./config/firebase";
+
+//App Pages
 import Dash from "./Views/Dash";
 import Join from "./Views/Join";
 import Checkin from "./Views/Checkin";

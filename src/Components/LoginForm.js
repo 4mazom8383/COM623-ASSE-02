@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import styled from "styled-components";
-import facebook from "../assets/facebook.png";
-import google from "../assets/google.png";
+import login_img from "../assets/login.gif";
 import Button from "../Components/Button";
 import { useForm } from "react-hook-form";
 import Input from "../Components/Input";
@@ -15,20 +14,17 @@ const StyledErrorLabel = styled.label`
     margin: 1% 0 4% 0;
   `;
 
-const StyledHeading = styled.h2`
+const Head_TXT = styled.div`
     text-align: center;
-    margin-top: 2%;
-    color: ${({ theme }) => theme.colors.purple};
+    color: #CFCDCA;
   `;
 
 const StyledSocialIconArea = styled.div`
     display: flex;
     justify-content: space-around;
-    img {
-      width: 50px;
-      height: 50px;
-    }
+    img {width:80%;background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.26) 0%, rgba(217, 217, 217, 0) 100%);}
   `;
+
 
 
 
@@ -68,41 +64,26 @@ function LoginForm(props) {
   return (
     <React.Fragment>
       <StyledSocialIconArea>
-        <img
-          src={facebook}
-          alt="#"
-          onClick={() => onSocialSubmit("facebook")}
-        />
-        <img src={google} alt="#" onClick={() => onSocialSubmit("google")} />
+        <img src={login_img} alt="#" />
       </StyledSocialIconArea>
-      <StyledHeading> OR </StyledHeading>
-
+      <Head_TXT> 
+        <h2>Manage your <br></br>daily tasks </h2>
+        <br></br>
+        <p>Team and project managment with solution providing App</p>
+      </Head_TXT>
       {!displayEmail && <Button onClick={handleClick} text="Email" />}
 
       {displayEmail && (
         <form onSubmit={handleSubmit(onEmailSubmit)}>
-          <p>
-            <label> Email </label>
-          </p>
-          <p>
-            <Input
-              type="text"
-              style={errorBorder(errors.email)}
-              {...register("email")}
-            />
-            <StyledErrorLabel>{errors?.email?.message}</StyledErrorLabel>
-          </p>
 
+          <label> Email </label>
+          <Input type="text" style={errorBorder(errors.email)} {...register("email")} />
+          <StyledErrorLabel>{errors?.email?.message}</StyledErrorLabel>
+          <br></br>
           <label> Password </label>
-          <p>
-            <Input
-              type="password"
-              name="password"
-              {...register("password")}
-              style={errorBorder(errors.password)}
-            />
-            <StyledErrorLabel>{errors?.password?.message}</StyledErrorLabel>
-          </p>
+          <Input type="password" name="password" {...register("password")} style={errorBorder(errors.password)}/>
+          <StyledErrorLabel>{errors?.password?.message}</StyledErrorLabel>
+          <br></br>
           <StyledErrorLabel> {serverErrorMessage} </StyledErrorLabel>
           <Button text={buttonText} type="submit" />
         </form>
@@ -111,6 +92,7 @@ function LoginForm(props) {
   );
 }
 
+
 LoginForm.propTypes = {
   buttonText: PropTypes.string,
 };
@@ -118,5 +100,4 @@ LoginForm.propTypes = {
 LoginForm.defaultProps = {
   buttonText: "JOIN",
 };
-
 export default LoginForm;

@@ -1,17 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-const StyledButton = styled.button`
-    height: 44.63px;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    border-radius: 22px;
+const Txt_btn = styled.div`
+  button{
+    height: 45px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     width: 100%;
-    margin-top: 6%;
+
+    background: linear-gradient(151.85deg, #8E5AF1 0%, #5E19D6 100%);
+    border-radius: 0px 35px 35px 35px;
+    border: none;
+    box-shadow:none;
+  }
   `;
 function Button(props) {
 
@@ -20,7 +24,11 @@ function Button(props) {
  
 
   return(  
-    <StyledButton onClick={onClick}> {text} </StyledButton>
+
+    <Txt_btn>
+      <button onClick={onClick} class="btn btn-primary">{text}</button>
+    </Txt_btn>
+
   )
 }
 
