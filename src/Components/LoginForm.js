@@ -8,11 +8,12 @@ import Input from "../Components/Input";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+
 const StyledErrorLabel = styled.label`
     color: red;
     font-weight: bolder;
     margin: 1% 0 4% 0;
-  `;
+`;
 
 const Head_TXT = styled.div`
     text-align: center;

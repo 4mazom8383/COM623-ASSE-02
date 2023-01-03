@@ -3,17 +3,14 @@ import useAuth from "./services/firebase/useAuth";
 import useCheckin from "./services/firebase/useCheckin";
 import theme from "./config/theme.js";
 
+
 //Styles
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./config/globalStyles";
 import Header from "./Components/Header";
-import {
-  Switch,
-  Route,
-  useLocation,
-  useHistory,
-  Redirect,
-} from "react-router-dom";
+import Footer_Nav from "./Components/footer_nav";
+//React Routers
+import { Switch, Route, useLocation, useHistory, Redirect, Link } from "react-router-dom";
 
 //Firebase
 import { initializeApp } from "firebase/app";
@@ -25,6 +22,11 @@ import Join from "./Views/Join";
 import Checkin from "./Views/Checkin";
 import Profile from "./Views/Profile";
 import Login from "./Views/Login";
+import Contact from "./Views/Contact";
+import AddProject from "./Views/add_project";
+
+
+
 
 function Protected({ authenticated, children, ...rest }) {
   debugger;
@@ -82,7 +84,13 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
         {location.pathname !== "/join" && location.pathname !== "/login" && (
-          <Header onClick={handleClick} open={menuOpen} signOut={signUserOut} />
+          <div>
+
+            <Header onClick={handleClick} open={menuOpen} signOut={signUserOut} />
+            <Footer_Nav></Footer_Nav>
+          </div>
+
+
         )}
         <GlobalStyles />
         <div
@@ -94,25 +102,43 @@ function App() {
             height: "100vh",
           }}
         >
+
+          
           <Switch>
+            
             <Protected authenticated={isAuthenticated} exact path="/">
               <Dash />
             </Protected>
+            
             <Route path="/join">
               <Join createEmailUser={createEmailUser} />
             </Route>
+            
             <Route path="/login">
               <Login signInEmailUser={signInEmailUser} />
             </Route>
+            
             <Protected authenticated={isAuthenticated} path="/profile">
               <Profile />
             </Protected>
+            
+            <Protected authenticated={isAuthenticated} path="/contact">
+              <Contact />
+            </Protected>
+
+            <Protected authenticated={isAuthenticated} path="/AddProject">
+              <AddProject />
+            </Protected>
+
             <Protected authenticated={isAuthenticated} exact path="/checkin">
               <Checkin />
             </Protected>
           </Switch>
         </div>
       </ThemeProvider>
+
+
+
     </div>
   );
 }

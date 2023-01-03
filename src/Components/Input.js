@@ -11,8 +11,6 @@ const StyledInput = styled.input`
     font-size: 20px;
     margin-bottom: 2%; 
     color:#8C58F0;font-weight:bold;padding-left: 10px;}
-
-
 `;
 
 export default StyledInput;

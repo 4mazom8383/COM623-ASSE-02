@@ -1,60 +1,33 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import DaysCompleted from "../Components/DaysCompleted";
-import CheckinComment from "../Components/CheckinComment";
-import useAuth from "../services/firebase/useAuth";
-import useCheckin from "../services/firebase/useCheckin";
-import { serverTimestamp } from "firebase/firestore";
+import MonthlyReviews from "../Components/monthly_reviews";
+import {MDBContainer, MDBRow, MDBCol} from 'mdb-react-ui-kit';
 
-function Dash(props) {
-  const { user } = useAuth();
-  const [checkins, setCheckins] = useState([]);
-  const { createCheckinComment, getCheckins } = useCheckin();
-
-  const getCheckinData = async () => {
-    const checkinsSnap = await getCheckins();
-    let checkins = [];
-    if (checkinsSnap.size) {
-      checkinsSnap.forEach((doc) => {
-        checkins.push({ ...doc.data(), ...{ id: doc.id } });
-      });
-      setCheckins(checkins.reverse());
-    }
-  };
-
-  useEffect(() => {
-    getCheckinData();
-  }, []);
-
-  const handleComment = async (id, comment) => {
-    try {
-      await createCheckinComment(id, {
-        ...{ comment },
-        ...{
-          name: user.displayName || user.email,
-          time: serverTimestamp(),
-          photo: user.photoURL,
-        },
-      });
-    } catch (e) {
-      console.log(e);
-      console.log("could not add a comment");
-    }
-  };
-
+function Daash(){
   return (
-    <div>
-      <DaysCompleted days={15} checkins={checkins}>
-      </DaysCompleted>
-      {checkins.map((c) => (
-        <CheckinComment key={c.id} onComment={handleComment} checkin={c} />
-      ))}
-    </div>
-  );
-}
+  <div>
+    <br></br>
+    <br></br>
+    <br></br>
 
-Dash.propTypes = {
-  checkins: PropTypes.array.isRequired,
+    <MDBContainer>
+      <MDBRow center>
+          <h3><b>Hello there!</b></h3>
+          <DaysCompleted> </DaysCompleted>
+      </MDBRow>
+
+      <br></br>
+      <br></br>
+      <MDBRow center>
+          <h3><b>Monthly Review</b></h3>
+          <MonthlyReviews> </MonthlyReviews>
+      </MDBRow>
+    </MDBContainer>
+
+  </div>
+
+
+  );
 };
 
-export default Dash;
+export default Daash;
