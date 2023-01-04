@@ -24,8 +24,7 @@ import Profile from "./Views/Profile";
 import Login from "./Views/Login";
 import Contact from "./Views/Contact";
 import AddProject from "./Views/add_project";
-
-
+import ProjectDetails from "./Views/project_details";
 
 
 function Protected({ authenticated, children, ...rest }) {
@@ -118,6 +117,10 @@ function App() {
               <Login signInEmailUser={signInEmailUser} />
             </Route>
             
+            <Protected authenticated={isAuthenticated} exact path="/ProjectDetails">
+              <ProjectDetails />
+            </Protected>
+
             <Protected authenticated={isAuthenticated} path="/profile">
               <Profile />
             </Protected>
@@ -130,9 +133,7 @@ function App() {
               <AddProject />
             </Protected>
 
-            <Protected authenticated={isAuthenticated} exact path="/checkin">
-              <Checkin />
-            </Protected>
+
           </Switch>
         </div>
       </ThemeProvider>

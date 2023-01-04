@@ -174,6 +174,15 @@ function Menu(props) {
                   <span>FAQ</span>
               </Link>
             </StyledLi>
+
+            <StyledLi active={location.pathname === "/ProjectDetails"}>
+              <Link to="/ProjectDetails">
+                  <Icon2 viewBox="0 0 28 28">
+                      <path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/>
+                  </Icon2>
+                  <span>Day Mode</span>
+              </Link>
+            </StyledLi>
           </ul>
         </StyledNav>
 

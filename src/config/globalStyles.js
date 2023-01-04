@@ -38,6 +38,13 @@ em {
     font-size: ${({ theme }) => theme.typography.em.fontSize};
 }
 
+h3{
+    background: linear-gradient(99.48deg, #56F29F 5.97%, #82D7F8 98.57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
 
 p::before{content: inherit !important;}
 
@@ -58,7 +65,7 @@ p::before{content: inherit !important;}
 .contact_card{
     display: flex;
     align-items: center;
-    a{margin-right: 0em;}
+    a{margin-right: 5px !important;}
 }
 
 #Second_Card{background: linear-gradient(151.85deg, #10C9F9 0%, #004783 100%) !important}
