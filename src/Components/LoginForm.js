@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import styled from "styled-components";
-import login_img from "../assets/login.gif";
+
+
 import Button from "../Components/Button";
 import { useForm } from "react-hook-form";
 import Input from "../Components/Input";
@@ -64,9 +65,7 @@ function LoginForm(props) {
   const errorBorder = (error) => error && { borderColor: "red" };
   return (
     <React.Fragment>
-      <StyledSocialIconArea>
-        <img src={login_img} alt="#" />
-      </StyledSocialIconArea>
+
       <Head_TXT> 
         <h2>Manage your <br></br>daily tasks </h2>
         <br></br>
@@ -78,7 +77,7 @@ function LoginForm(props) {
         <form onSubmit={handleSubmit(onEmailSubmit)}>
 
           <label> Email </label>
-          <Input type="text" style={errorBorder(errors.email)} {...register("email")} />
+          <Input type="email" style={errorBorder(errors.email)} {...register("email")} />
           <StyledErrorLabel>{errors?.email?.message}</StyledErrorLabel>
           <br></br>
           <label> Password </label>

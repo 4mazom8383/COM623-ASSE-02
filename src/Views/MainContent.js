@@ -2,8 +2,17 @@ import React, { useEffect, useState } from "react";
 import DaysCompleted from "../Components/DaysCompleted";
 import MonthlyReviews from "../Components/monthly_reviews";
 import {MDBContainer, MDBRow, MDBCol} from 'mdb-react-ui-kit';
+import useAuth from "../services/firebase/useAuth";
 
-function Daash(){
+
+
+function MainContent(){
+
+
+  const { user, signUserOut } = useAuth();
+
+  if (!user.uid) { return "" }
+
   return (
   <div>
     <br></br>
@@ -12,7 +21,9 @@ function Daash(){
 
     <MDBContainer>
       <MDBRow center>
-          <h3><b>Hello there!</b></h3>
+          <h3><b>Hello {user.displayName || user.email} </b> </h3>
+          
+
           <DaysCompleted> </DaysCompleted>
       </MDBRow>
 
@@ -30,4 +41,4 @@ function Daash(){
   );
 };
 
-export default Daash;
+export default MainContent;

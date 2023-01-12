@@ -69,10 +69,6 @@ export default function Profile() {
             <MDBRow>
                 
                 <Profile_info md='4' lg='4' xl='4'>
-                    <MDBBtn href='#' toggle disabled color="link">
-                        youssef fisal
-                    </MDBBtn>
-                    
 
                     <MDBBtn href='#' toggle disabled color="link">
                         {user.displayName || user.email}

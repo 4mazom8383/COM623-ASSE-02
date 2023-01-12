@@ -17,7 +17,7 @@ import { initializeApp } from "firebase/app";
 import firebaseConfig from "./config/firebase";
 
 //App Pages
-import Dash from "./Views/Dash";
+import MainContent from "./Views/MainContent";
 import Join from "./Views/Join";
 import Checkin from "./Views/Checkin";
 import Profile from "./Views/Profile";
@@ -106,7 +106,7 @@ function App() {
           <Switch>
             
             <Protected authenticated={isAuthenticated} exact path="/">
-              <Dash />
+              <MainContent />
             </Protected>
             
             <Route path="/join">

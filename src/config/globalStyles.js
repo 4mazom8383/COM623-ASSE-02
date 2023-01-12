@@ -11,6 +11,8 @@ body {
     color:white;
 }
 
+input, textarea{padding: 10px 1em !important;}
+
 h1 {
     font-size: ${({ theme }) => theme.typography.h1.fontSize};
 }

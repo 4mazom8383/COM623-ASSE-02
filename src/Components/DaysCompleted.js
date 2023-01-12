@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
+
 
 //Import imgs
 import Memeber1 from '../assets/team_img/member1.png'; 
@@ -57,15 +59,9 @@ const Progress_container = styled.div`
     div:after{content: ""; display: table; clear: both; position: absolute; right: 0; width: 8px; height: 8px; background: yellow;}
 `;
 
-
-
-
 function DaysCompleted() {
   const Wrapper = styled.section`
     margin-top: 3vh;
-
- 
-    
   `;
   
   return (
@@ -74,7 +70,9 @@ function DaysCompleted() {
       <MDBContainer>
         <MDBRow>
 
-          <MDBCol md='6' lg='6' xl='6'>
+        
+          <MDBCol md='12' lg='6' xl='6'>
+            <Link to="/ProjectDetails">
             <MDBCard>
               <Card_Body>
                 <MDBCardBody>
@@ -100,9 +98,15 @@ function DaysCompleted() {
                 </MDBCardBody>
               </Card_Body>    
             </MDBCard>
+            </Link>
           </MDBCol>
-            
+        
+
+
+
+        
           <MDBCol md='6' lg='6' xl='6'>
+            <Link to="/ProjectDetails">
             <MDBCard>
               <Card_Body id="Second_Card">
                 <MDBCardBody>
@@ -128,8 +132,8 @@ function DaysCompleted() {
                 </MDBCardBody>
               </Card_Body>    
             </MDBCard>
+            </Link>
           </MDBCol>
-
         </MDBRow>
       </MDBContainer>
     </Wrapper>

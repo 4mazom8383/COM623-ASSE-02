@@ -234,7 +234,6 @@ function Header(props) {
             data-mdb-toggle="dropdown"
             aria-expanded="false"
           >
-            <img src={user.photoURL || avatar} alt="avatar" />
             {user.displayName || user.email}
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
