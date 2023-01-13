@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import login_img from "../assets/login.gif";
 
 
 import Button from "../Components/Button";
@@ -31,7 +33,7 @@ const StyledSocialIconArea = styled.div`
 
 
 function LoginForm(props) {
-  const { buttonText, onEmailSubmit, onSocialSubmit, serverErrorMessage } = props;
+  const { buttonText, onEmailSubmit, serverErrorMessage } = props;
   const [displayEmail, setDisplayEmail] = useState(false);
 
   const loginFormSchema = yup
@@ -65,7 +67,9 @@ function LoginForm(props) {
   const errorBorder = (error) => error && { borderColor: "red" };
   return (
     <React.Fragment>
-
+      <StyledSocialIconArea>
+        <img src={login_img} alt="#" />
+      </StyledSocialIconArea>
       <Head_TXT> 
         <h2>Manage your <br></br>daily tasks </h2>
         <br></br>
@@ -85,7 +89,7 @@ function LoginForm(props) {
           <StyledErrorLabel>{errors?.password?.message}</StyledErrorLabel>
           <br></br>
           <StyledErrorLabel> {serverErrorMessage} </StyledErrorLabel>
-          <Button text={buttonText} type="submit" />
+          <Button Link to="/" text={buttonText} type="submit" />
         </form>
       )}
     </React.Fragment>

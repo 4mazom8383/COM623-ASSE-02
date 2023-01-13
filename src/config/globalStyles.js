@@ -101,6 +101,11 @@ h1{
     text-transform: capitalize;
     color: #8C58F0;
 }
+
+@media only screen and (max-width: 900px) {
+    form, .footer{width: 90vw !important;}
+}
+
 `;
 
 export default GlobalStyles;

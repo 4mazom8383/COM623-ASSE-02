@@ -52,7 +52,7 @@ function footer_nav() {
 
 
   return (
-    <Bottom_Nav>
+    <Bottom_Nav class="footer">
         <ul>
             <Link to="/">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">

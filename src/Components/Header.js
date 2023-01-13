@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import avatar from "../assets/avatar_small.png";
 import useAuth from "../services/firebase/useAuth";
 
 

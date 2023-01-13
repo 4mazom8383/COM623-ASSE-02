@@ -21,7 +21,7 @@ function MainContent(){
 
     <MDBContainer>
       <MDBRow center>
-          <h3><b>Hello {user.displayName || user.email} </b> </h3>
+          <h3>Hello <b><br></br>{user.displayName || user.email} </b> </h3>
           
 
           <DaysCompleted> </DaysCompleted>

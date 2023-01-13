@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+
 const StyledErrorLabel = styled.label`
     color: red;
     font-weight: bolder;
@@ -48,6 +49,8 @@ function ContactForm() {
     addDoc(contactForm, {fullName, email, subject,Txt_message})
       .then(response =>{
         console.log(response)
+        alert("You're Your message has been successfully sent. We'll get in touch with you asap. Thank you.")
+
       })
       .catch(error => {
         console.log(error.message)
@@ -68,7 +71,7 @@ function ContactForm() {
       subject: yup
         .string()
         .required("Please enter your subject")
-        .max(20, "Subject must be less than 20 letters"),
+        .max(50, "Subject must be less than 20 letters"),
       messageTXT: yup
         .string()
         .required("Please enter your message")
@@ -82,35 +85,37 @@ function ContactForm() {
     });
   
     const onSubmit = data => console.log(data);
-    const errorBorder = (error) => error && { borderColor: "red" };
    
-
+    const [basicModal, setBasicModal] = useState(false);
+    const toggleShow = () => setBasicModal(!basicModal);
   return (
     <Form_Container>
       <h1>Contact Us</h1>
         <div onSubmit={handleSubmit(onSubmit)}>
           <form onSubmit={add_data}>
-            <label>Full Name</label>
-            <input type="text" name="fullname" value={fullName} onChange={e => setName(e.target.value)} {...register("fullname")} style={errorBorder(errors.fullname)}/>
+            <label>Full Name</label>            
+            <input type="text" {...register("fullname")} value={fullName} onChange={e => setName(e.target.value)} placeholder="Ex. Eden Hazard"></input>
             <StyledErrorLabel>{errors?.fullname?.message}</StyledErrorLabel>
 
 
 
             <label> Email </label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} style={errorBorder(errors.email)} {...register("email")} />
+            <input type="email" {...register("email")} value={email} onChange={e => setEmail(e.target.value)} placeholder="Ex..contact@mail.com"></input>
+
             <StyledErrorLabel>{errors?.email?.message}</StyledErrorLabel>
 
 
             <label>Subject</label>
-            <input type="text" value={subject} onChange={e => setSubject(e.target.value)} name="subject" {...register("subject")} style={errorBorder(errors.subject)}/>
+            <input type="text" {...register("subject")} value={subject} onChange={e => setSubject(e.target.value)} placeholder="Ex. Project saving issue"></input>
+
             <StyledErrorLabel>{errors?.subject?.message}</StyledErrorLabel>
 
 
             <label>Message</label>
-            <textarea value={Txt_message} onChange={e => setMessage(e.target.value)} {...register("messageTXT")} style={errorBorder(errors.messageTXT)} placeholder="Please enter your message here..."></textarea>
+            <textarea {...register("messageTXT")} value={Txt_message} onChange={e => setMessage(e.target.value)} placeholder="Please enter your message here..."></textarea>
             <StyledErrorLabel>{errors?.messageTXT?.message}</StyledErrorLabel>
 
-            <input class="btn" type="submit" value="Submit"/>
+            <input class="btn" type="submit" value="send your message now"/>
         </form>
       </div>
     </Form_Container>

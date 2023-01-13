@@ -19,7 +19,6 @@ import firebaseConfig from "./config/firebase";
 //App Pages
 import MainContent from "./Views/MainContent";
 import Join from "./Views/Join";
-import Checkin from "./Views/Checkin";
 import Profile from "./Views/Profile";
 import Login from "./Views/Login";
 import Contact from "./Views/Contact";
@@ -84,7 +83,6 @@ function App() {
       <ThemeProvider theme={theme}>
         {location.pathname !== "/join" && location.pathname !== "/login" && (
           <div>
-
             <Header onClick={handleClick} open={menuOpen} signOut={signUserOut} />
             <Footer_Nav></Footer_Nav>
           </div>
