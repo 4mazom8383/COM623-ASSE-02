@@ -60,7 +60,7 @@ Therefore, the first enhancements that will be conducted in the future are the o
 
 > The results may not provide a deep version of the testing. However, it can certainly provide an understanding to know whether the current progress is something we can build on or not. Thus, these feedbacks only be considered as positive responses for the potential end users that can be taken as basis for future improvements.
 
->> The quiz results as well as the questionnaire responses will be attached to this documentation file.
+>> The quiz results as well as the questionnaire responses will be attached to the Repository files.
 
 ## Conclusion/Results
 
