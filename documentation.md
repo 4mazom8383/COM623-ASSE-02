@@ -23,6 +23,8 @@ Throughout this particular documentation, the main focus will be given to develo
 
 As stated in the first part of the assessment, the chosen approach to process this project is the design thinking methodology, in which the first three stages have been already completed and documented in the submitted report. 
 
+<img width="1430" alt="Screen Shot 2023-01-13 at 12 13 49" src="https://user-images.githubusercontent.com/72255167/212318051-3fdb95a1-61b6-46a5-92fc-4ed236df3e28.png">
+
 Several challenges have been faced during the implementation of the realistic prototype, which required conducing a number of research and self learning in order to figure out how certain elements of the project can be developed.
 
 Most of the parts of the client side (Front-End) have been successfully developed based on single page web application concept as demonstrated in the first part of the assessment.
