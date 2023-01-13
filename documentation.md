@@ -52,9 +52,15 @@ In conjunction with the first quiz, another open questionnaire has been conducte
 
 This has covered several open questions in regard to the project. A number of responses as shown in the responses link have addressed various issues on the app. For instance, when a user joins the app by email and password, instead of going to the main page same as the login process. The app unfortunately stops, and the user had to refresh the app manually. This problem is hard to be noticed unless someone else out of the development circle has tried it.
 
-The primary them on the app is the dark them, several responses have addressed the dynamic them on the app, which certainly will be included in the future improvements. Another important aspect that was covered in the responses is the task timeline, which has been already designed at the design phase, the aim is integrating it in the future development since it is already designed.
+The primary theme on the app is the dark theme, several responses have addressed the dynamic them on the app, which certainly will be included in the future improvements. Another important aspect that was covered in the responses is the task timeline, which has been already designed at the design phase, the aim is integrating it in the future development since it is already designed.
+
+The majority of the addressed problems are mainly backend server side issues. This can be noticed from simple examination of the app as well as the collected responses.
+
+Therefore, the first enhancements that will be conducted in the future are the ones in regard to the server side before adding any extra features.
 
 > The results may not provide a deep version of the testing. However, it can certainly provide an understanding to know whether the current progress is something we can build on or not. Thus, these feedbacks only be considered as positive responses for the potential end users that can be taken as basis for future improvements.
+
+>> The quiz results as well as the questionnaire responses will be attached to this documentation file.
 
 ## Conclusion/Results
 
