@@ -1,12 +1,17 @@
-### Project Title : Daily task management tool
-### Full Name: Mohamed Mazouz
-### ID: Q14317583
-### Project link:  https://com623-asse-02.web.app
-### Git Repository: https://github.com/4mazom8383/COM623-ASSE-02
+#### Project Title : Daily task management tool
+#### Full Name: Mohamed Mazouz
+#### ID: Q14317583
+#### Project link:  https://com623-asse-02.web.app
+#### Git Repository: https://github.com/4mazom8383/COM623-ASSE-02
 
 
 ## Introduction
 This particular documentation is going to cover the fourth stage of the chosen design methodology (Design Thinking) known as prototyping where the second part of the implementation will be presented in the form of coded prototype that can provide a more realistic and dynamic version of the project before presenting it to the end user in order to be tested in the last stage of the design process known as the testing phase.
+
+
+One of the most well-known problems that students face throughout their studies is the time management of their assessment projects; many of them fail to set a proper time management and eventually wind up overwhelmed with loads of work to complete, especially if they have to work on more than one project at the same time. Moreover, many students undervalue the power of project time managements tools, which results in serious difficulty to get them adapted with the work process and work flow in the field and the pressure of more than a project once. 
+
+> Therefore, the suggested solution to attempt solving this problem is an integrated platform on student portal website that can offer a number of options such as timelines, task lists and more; in which the student will be able to focus on the university services and not get lost in the uncountable paid or free platforms available online. This is aiming to familiarise students with the concept of management tools while also establishing the habit of being organise.
 
 Throughout this particular documentation, the main focus will be given to development process of the front-end and the back-end sides of this project in order to document all the used tools and techniques to achieve this phase.
 
