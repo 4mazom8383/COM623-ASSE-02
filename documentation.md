@@ -48,8 +48,6 @@ Moving towards the fifth stage of the chosen methodology and in order to test th
 
 The results of the quiz have shown a positive and encouraging feedback from the targeted end user, where almost all the identified aspect have been rated three points out of five. These can be seen positive responses from the potential end users, but at the same time it doesn’t mean there are no weaknesses. Instead, this clearly helped to identify areas that should be ameliorated in conjunction with the uncompleted features from the UI/UX design concept.
 
-The quiz results can be found at the following link: https://forms.office.com/Pages/AnalysisPage.aspx?AnalyzerToken=M9bhUTx78m5kfTNjXgqO2Fzn1Dt4MGEJ&id=zeSE1hpJd0W_M1RkeNcuPLnqxA3M8txMvAIdOhUbJfJUME8wVzBFOVcwNEFQNEMyUjI5NFpCNUFGVS4u
-
 In conjunction with the first quiz, another open questionnaire has been conducted where potential end users have expressed their perspective about the current version of the project.
 
 This has covered several open questions in regard to the project. A number of responses as shown in the responses link have addressed various issues on the app. For instance, when a user joins the app by email and password, instead of going to the main page same as the login process. The app unfortunately stops, and the user had to refresh the app manually. This problem is hard to be noticed unless someone else out of the development circle has tried it.
