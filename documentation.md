@@ -1,8 +1,8 @@
-# Project Title : Daily task management tool
-# Full Name: Mohamed Mazouz
-# ID: Q14317583
-# Project link:  https://com623-asse-02.web.app
-# Git Repository: https://github.com/4mazom8383/COM623-ASSE-02
+### Project Title : Daily task management tool
+### Full Name: Mohamed Mazouz
+### ID: Q14317583
+### Project link:  https://com623-asse-02.web.app
+### Git Repository: https://github.com/4mazom8383/COM623-ASSE-02
 
 
 ## Introduction
